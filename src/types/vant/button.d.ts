@@ -1,7 +1,7 @@
 declare namespace JSX {
   interface IntrinsicElements {
     'van-button': {
-      children?: React.ReactChild;
+      children?: React.ReactNode;
 
       /**
        * 标识符
@@ -34,7 +34,7 @@ declare namespace JSX {
        * 图标类名前缀，同 Icon 组件的 class-prefix 属性
        * @default 'van-icon'
        */
-      'class-prefix'?: string;
+      classPrefix?: string;
 
       /**
        * 是否为朴素按钮
@@ -80,34 +80,34 @@ declare namespace JSX {
       /**
        * 加载状态提示文字
        */
-      'loading-text'?: string;
+      loadingText?: string;
 
       /**
        * 加载状态图标类型，可选值为 spinner
        * @default 'circular'
        */
-      'loading-type'?: 'spinner' | 'circular';
+      loadingType?: 'spinner' | 'circular';
 
       /**
        * 加载图标大小
        * @default '20px'
        */
-      'loading-size'?: string;
+      loadingSize?: string;
 
       /**
        * 自定义样式
        */
-      'custom-style'?: string;
+      customStyle?: string;
 
       /**
        * 微信开放能力，具体支持可参考 微信官方文档
        */
-      'open-type'?: string;
+      openType?: string;
 
       /**
        * 打开 APP 时，向 APP 传递的参数
        */
-      'app-parameter'?: string;
+      appParameter?: string;
 
       /**
        * 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文
@@ -118,36 +118,36 @@ declare namespace JSX {
       /**
        * 会话来源
        */
-      'session-from'?: string;
+      sessionFrom?: string;
 
       /**
        * 客服消息子商户 id
        */
-      'business-id'?: string;
+      businessId?: string;
 
       /**
        * 会话内消息卡片标题
        * @default `当前标题`
        */
-      'send-message-title'?: string;
+      sendMessageTitle?: string;
 
       /**
        * 会话内消息卡片点击跳转小程序路径
        * @default `当前分享路径`
        */
-      'send-message-path'?: string;
+      sendMessagePath?: string;
 
       /**
        * sendMessageImg
        * @default `截图`
        */
-      'send-message-img'?: string;
+      sendMessageImg?: string;
 
       /**
        * 显示会话内消息卡片
        * @default false
        */
-      'show-message-card'?: boolean;
+      showMessageCard?: boolean;
 
       /**
        * 按钮 dataset，open-type 为 share 时，可在 onShareAppMessage 事件的 event.target.dataset.detail 中看到传入的值
@@ -157,7 +157,19 @@ declare namespace JSX {
       /**
        * 用于 form 组件，可选值为submit reset，点击分别会触发 form 组件的 submit/reset 事件
        */
-      'form-type'?: 'submit' | 'reset';
+      formType?: 'submit' | 'reset';
+
+      /**
+       * 根节点样式类
+       * @description Vant 中默认添加一个 externalClasses 'custom-class'
+       * @description vant-weapp/dist/common/component.js#24
+       */
+      customClass?: string;
+
+      /**
+       * 加载图标样式类
+       */
+      loadingClass?: string;
     };
   }
 }

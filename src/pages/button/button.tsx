@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Text, Block } from '@tarojs/components';
 
-const Button: React.FC = () => {
+import './button.less';
+
+const VanButton: React.FC = () => {
   return (
     <Block>
       <Text>Button 按钮</Text>
@@ -63,8 +65,8 @@ const Button: React.FC = () => {
 
       <View>
         <van-button loading type="primary" />
-        <van-button loading type="primary" loading-type="spinner" />
-        <van-button loading type="info" loading-text="加载中..." />
+        <van-button loading type="primary" loadingType="spinner" />
+        <van-button loading type="info" loadingText="加载中..." />
       </View>
 
       <View>
@@ -134,8 +136,21 @@ const Button: React.FC = () => {
         </van-button>
         <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
       </View>
+
+      <View>
+        <Text>外部样式类</Text>
+      </View>
+
+      <View>
+        <van-button type="primary" customClass="custom-class">
+          主要按钮
+        </van-button>
+        <van-button loading type="primary" loadingClass="custom-class">
+          主要按钮
+        </van-button>
+      </View>
     </Block>
   );
 };
 
-export default Button;
+export default VanButton;
